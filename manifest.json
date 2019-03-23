@@ -1,0 +1,13 @@
+{
+    "name": "Tests!",
+    "short_name": "Tests!",
+    "display": "standalone",
+    "background_color": "gray",
+    "description": "Tests para todo el Mundo!",
+    "icons": [
+        {
+            "src": "icono.png",
+            "sizes": "96x96"
+        }
+    ]
+}

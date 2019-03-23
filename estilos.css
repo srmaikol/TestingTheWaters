@@ -1,0 +1,221 @@
+html {
+    background-color:black;	
+}
+body {
+    border-radius: 4vw;
+	font-family: calibri;
+    color: white;
+    margin: 2vh 2vh 0 2vh;
+    height: 96vh;
+    /*overflow: hidden;*/
+    /*overflow: auto;*/
+}
+
+@media all and (max-width: 499px) {
+body{
+        font-size: calc(3vw+3vh);
+    }
+}
+@media all and (min-width: 500px) {
+body{
+        font-size: calc(15vw+15vh);
+    }
+}
+
+
+#coincidencias {
+    text-align: left;
+    font-size: 1em;
+}
+
+#recomendacion {
+    font-size: 1em;
+}
+
+.resaltado {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.2em;
+
+}
+
+#pregunta {
+    height: 40vh;
+    border-radius: 4vw 4vw 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.grande, h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+p, h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+
+}
+
+input[type=radio] {
+    display:none; 
+}
+
+/* CONTROL DESLIZANTE  */
+input[type=range]{
+    -webkit-appearance: none;
+    width: 70vw;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    /*width: 70px;*/
+    height: 5px;
+    background: black;
+    border: black;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: orange;
+    margin-top: -10px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+.pantallas {
+    padding: 1vh;
+    margin: auto;
+    text-align: center;
+    height: 94vh;
+    /*height: 84vh;*/
+    border-radius: 5vh;
+    background-image: url('bondage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 0%;
+    color: black;
+    display: none;
+    /* position: relative; */
+}
+
+#cajaEjemplos {
+    margin: auto;
+    width: 50vh;
+}
+
+button{
+    border-radius: 3vh;
+    font-size: 6vh;
+    font-weight: bold;
+    padding: 1.5vh;
+    color: black;
+    background: rgba(255,255,255,0.5);
+    border: 3px solid black;
+    cursor: pointer;    
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#probando{
+    display: none;
+    float: right;
+}
+
+label{
+    border-radius: 2vh;
+    cursor: pointer;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background-color: transparent;
+    /*vertical-align: middle;*/
+}
+
+label img {
+    width: 60px;
+    height: 60px;
+}
+
+label:active, button:active { 
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;    
+    background-color: orange;
+}
+
+/* 
+@media (hover: hover) {
+    label {
+        background-color: transparent;
+    }
+    label:hover, button:hover {
+        background-color: orange;
+        }
+    } */
+
+.carucha {
+    margin-top: 8px;
+}
+
+.carita {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+}
+
+.ejemplos {
+    text-align: left;
+    margin-left: 10vh;
+}
+
+.dosBotones {
+    display: flex;
+}
+
+#botonElla {
+    background-color: pink;
+}
+
+#botonEl {
+    background-color: paleturquoise;
+}
+
+#hechopor {
+        text-align: left;
+        color:black;
+        position: absolute;
+        bottom: 0;
+}
+
+/*
+.pista {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+label:hover .pista {
+    visibility: visible;*/ 
+/*}*/

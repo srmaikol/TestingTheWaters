@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>¡EL TEST SEXUAL EN PAREJA!</title>
+	<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" type="image/png" href="icono.png"/>
+</head>
+
+<body>
+<div id="presentacion" class="pantallas">
+    <h1 id="titulo"></span></h1>
+    <h2 id="subtitulo"></h2>
+    <h1><span>Nivel <span id="nivel">1</span></span></h1>
+    <input type="range" id="deslizador" oninput="slider()" min="1" max="11" value="1">
+    <br><br>
+    <button id="botonElla">Empieza Ella</button><br>
+    <button id="botonEl">Empieza Él</button>
+    <p id="hechopor">Realizado por Miguel Lederkremer - @leder</p>
+</div>
+
+<div id="presentacion2" class="pantallas">
+    <h1 id="titulo2"></h1>
+    <h2 id="subtitulo2"></h2>
+    <br>
+    <h1><span>Nivel <span id="nivel2">1</span></span></h1>
+    <button id="comenzar2" >¡Ahora!</button><br>    
+</div>
+
+<div id="listo" class="pantallas">
+    <p class="grande">Contesta <span id="jugador"></span></p>
+    <p>¡<span id="elOtro"></span> no debe mirar!<br>En cada propuesta elegí:</p>
+    <div id="cajaEjemplos">
+        <p class="ejemplos"><img class="carita" src='img/no.png'> ¡No me gusta!</p>
+        <p class="ejemplos"><img class="carita" src='img/medaigual.png'> Me da igual</p>
+        <p class="ejemplos"><img class="carita" src='img/si.png'> ¡Me gusta!</p>
+    </div>
+    <button id="botonListo">¡Listo!</button>
+</div>
+
+<div id="contestaElOtro" class="pantallas">
+    <p class="grande">Ahora debe contestar <span id="ahoraJugador"></span></p>    
+    <br>
+    <br>
+    <button id="botonAhora">¡Contesta ya!</button>
+    <div id="botonesEnviar">
+        <h2>O enviárselo para que lo responda:</h2>
+        <div class="dosBotones">    
+            <button id="botonRespondaxWP"><img src="img/iconoWP.png" width="50vw" height="50vw"></button><br>
+            <button id="botonRespondaxMail"><img  src="img/iconoMail.png" width="50vw" height="50vw"></button><br>
+        </div>
+    </div>
+</div>
+
+<div id="esperandoRespuesta" class="pantallas">
+    <h1>¡Cuestionario enviado! <span id="jugador"></span></h1>
+    <h2>Cuando lo conteste te llegarán los resultados</h2>
+    <button onclick="otraVez()">¡Otro test!</button>
+</div>
+
+<div id="cuestionario" class="pantallas">
+    <h1 id="pregunta"></h1>
+    <form  id="formulario" method="post" >
+            <input onclick="procesarRespuesta()" id="radio3" type="radio" value="2" required>
+            <label id="respuesta3" for="radio3"><img class="carucha" src='img/no.png'></label>       
+            <input onclick="procesarRespuesta()" id="radio2" type="radio" value="1" required>
+            <label id="respuesta2" for="radio2"><img class="carucha" src='img/medaigual.png'></label>
+            <input onclick="procesarRespuesta()" id="radio1" type="radio" value="0" required>
+            <label id="respuesta1" for="radio1"><img class="carucha" src='img/si.png'></label>
+    </form>
+</div>
+
+<div id="resultados" class="pantallas">
+	<h1>Coincidencias</h1>
+	<p id="coincidencias"></p>	
+    <button id="botonDiagnostico" style="display: none" onclick="diagnostico()">Diagnóstico</button>
+    <button id="botonMas" onclick="masResultados()">Ver más</button>
+</div>
+
+<div id="diagnostico" class="pantallas">
+	<h2>Coincidieron en un <span id="porcentaje"></span></h2>
+	<h2 id="recomendacion"></h2>
+    <p>Enviarle los resultados a tu pareja:</p>
+    <div class="dosBotones">    
+            <button id="botonMandarResultadosxWP"><img src="img/iconoWP.png" width="50vw" height="50vw"></button><br>
+            <button id="botonMandarResultadosxMail"><img src="img/iconoMail.png" width="50vw" height="50vw"></button><br>
+    </div>
+    <br>
+    <br>
+    <button id="botonOtraVez" onclick="otraVez()">¡Otro test!</button>
+    <h2>Compartir el test (¡no los resultados!)</h2>
+    <button id="botonCompartir"><img src="img/compartir.png" width="50vw" height="50vw"></button>
+    
+</div>
+
+<div id="compartir" class="pantallas">
+    <h1>Compartir</h1>
+    <p>¡Sólo el cuestionario, NO tus respuestas!</p>
+    <div class="dosBotones">    
+            <button id="botonMandarLinkxWP"><img src="img/iconoWP.png" width="50vw" height="50vw"></button><br>
+            <button id="botonMandarLinkxMail"><img src="img/iconoMail.png" width="50vw" height="50vw"></button><br>
+        </div>
+    
+</div>
+
+<p id="probando"></p>
+
+<script src="mijavascript.js"></script>
+</body>
+</html>
