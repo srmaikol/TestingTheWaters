@@ -1,5 +1,3 @@
-
-
 {   // INICIALIZACION DE VARIABLES GLOBALES 
     var cuestionarios=[];
     // cuestionarios.push(["Morderlo / Que me muerda","Que él me muerda / Morderla","Atarlo y excitarlo hasta que no de más / Que ella me ate y me excite hasta no dar más"]);
@@ -37,11 +35,16 @@
         }
     }
     
-// PARSEAR LAS RESPUESTAS DE LA PAREJA PASADAS EN LA URL (SI LAS HAY) Y CARGARLAS EN EL ARRAY RESPUESTAS[]
+    // PARSEAR LAS RESPUESTAS DE LA PAREJA PASADAS EN LA URL 
+    //(SI LAS HAY) Y CARGARLAS EN EL ARRAY RESPUESTAS[]
     var param = location.search.split('?')[1];
     // var param = "15FHJLNPRTVX";
+
+    // Si es nuevo ir a Intro si no ir a Presentacion2
+}    
+{    // ACA EMPIEZA A EJECUTARSE EL CODIGO
     if (param == null) {
-        presentacion(); 
+        intro(); 
     }
     else {
         var cacho = decod(param)
@@ -53,11 +56,39 @@
         jugador = 1-jugador;
         presentacion2();
         }
-    window.scrollTo(0,1);
+    // window.scrollTo(0,1);
+}
+
+//INTRO
+function intro(){
+    mostrar("#intro");
+    document.getElementById("botonIntro1").onclick = function() {
+        ocultar("#intro");
+        intro1()}
+    document.getElementById("saltearIntro").onclick = function() {
+        ocultar("#intro");        
+        presentacion()}
+}
+function intro1(){
+    mostrar("#intro1");
+    document.getElementById("botonIntro2").onclick = function() {
+        ocultar("#intro1");
+        intro2()}
+}
+function intro2(){
+    mostrar("#intro2");
+    document.getElementById("botonIntro3").onclick = function() {
+        ocultar("#intro2");
+        intro3()}
+}
+function intro3(){
+    mostrar("#intro3");
+    document.getElementById("botonComenzar").onclick = function() {
+        ocultar("#intro3");
+        presentacion()}
 }
 
 
-pon("")
 
 //SI ES EL PRIMERO EN CONTESTAR:
 function presentacion(){
@@ -244,7 +275,7 @@ function verQueOnda(x){
 }
 
 function mostrar(x){
-    document.querySelector(".pantallas").style.display = 'none';
+    // document.querySelector(".pantallas").style.display = 'none';
     document.querySelector(x).style.display = 'block';
 }
 

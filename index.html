@@ -9,15 +9,51 @@
 </head>
 
 <body>
+<div id="intro" class="pantallas">
+    <h1>¡EL TEST SEXUAL EN PAREJA!</h1>
+    <p class="anchoControlado">¿Pensaste en proponerle algo nuevo pero no te atreviste?</p> 
+    <p class="anchoControlado">¡A tu pareja le pasa lo mismo!</p>
+    <p class="anchoControlado">¡Diviértanse y exploren con este juego!</p>
+    <button id="botonIntro1">INSTRUCCIONES</button>
+    <button id="saltearIntro">¡JUGAR!</button>
+</div>
+    
+<div id="intro1" class="pantallas">
+    <h1>1. En cada propuesta elegí:</h1>
+    <div id="cajaEjemplos">
+        <p class="ejemplos"><img class="carita" src='img/si.png'> ¡Me gusta!</p>
+        <p class="ejemplos"><img class="carita" src='img/medaigual.png'> Me da igual</p>
+        <p class="ejemplos"><img class="carita" src='img/no.png'> ¡No me gusta!</p>
+    </div>
+        <p>Tus respuestas son secretas <strong>¡No las ve tu pareja!</strong></p>
+    <button id="botonIntro2">SIGUIENTE</button>
+</div>
+
+<div id="intro2" class="pantallas">
+    <h1>2. Luego de que lo contestaste, le envias el cuestionario a tu pareja</h1> 
+        <p>¡También lo contesta de manera secreta!</p>
+    
+    <button id="botonIntro3">SIGUIENTE</button>
+</div>
+
+<div id="intro3" class="pantallas">
+    <h1>3. Resultados</h1>
+        <p>Al finalizar verán SOLO las propuestas en las que coincidieron AMBOS</p> 
+        <!-- Hay 11 tests ordenados por nivel de atrevimiento. ¡A divertirse! -->
+    </h1>
+    <button id="botonComenzar">¡JUGAR!</button>
+</div>
+
+
 <div id="presentacion" class="pantallas">
-    <h1 id="titulo"></span></h1>
+    <h1 id="titulo"></h1>
     <h2 id="subtitulo"></h2>
-    <h1><span>Nivel <span id="nivel">1</span></span></h1>
+    <h1><span>Nivel <span id="nivel">1</span></h1>
     <input type="range" id="deslizador" oninput="slider()" min="1" max="11" value="1">
     <br><br>
     <button id="botonElla">Empieza Ella</button><br>
     <button id="botonEl">Empieza Él</button>
-    <p id="hechopor">Realizado por Miguel Lederkremer - @leder</p>
+    <p id="hechopor">© Miguel Lederkremer - @leder</p>
 </div>
 
 <div id="presentacion2" class="pantallas">
@@ -30,12 +66,7 @@
 
 <div id="listo" class="pantallas">
     <p class="grande">Contesta <span id="jugador"></span></p>
-    <p>¡<span id="elOtro"></span> no debe mirar!<br>En cada propuesta elegí:</p>
-    <div id="cajaEjemplos">
-        <p class="ejemplos"><img class="carita" src='img/no.png'> ¡No me gusta!</p>
-        <p class="ejemplos"><img class="carita" src='img/medaigual.png'> Me da igual</p>
-        <p class="ejemplos"><img class="carita" src='img/si.png'> ¡Me gusta!</p>
-    </div>
+    <p>¡<span id="elOtro"></span> no debe mirar!</p>
     <button id="botonListo">¡Listo!</button>
 </div>
 
@@ -62,12 +93,12 @@
 <div id="cuestionario" class="pantallas">
     <h1 id="pregunta"></h1>
     <form  id="formulario" method="post" >
-            <input onclick="procesarRespuesta()" id="radio3" type="radio" value="2" required>
-            <label id="respuesta3" for="radio3"><img class="carucha" src='img/no.png'></label>       
-            <input onclick="procesarRespuesta()" id="radio2" type="radio" value="1" required>
-            <label id="respuesta2" for="radio2"><img class="carucha" src='img/medaigual.png'></label>
-            <input onclick="procesarRespuesta()" id="radio1" type="radio" value="0" required>
-            <label id="respuesta1" for="radio1"><img class="carucha" src='img/si.png'></label>
+        <input onclick="procesarRespuesta()" id="radio1" type="radio" value="0" required>
+        <label id="respuesta1" for="radio1"><img class="carucha" src='img/si.png'></label>
+        <input onclick="procesarRespuesta()" id="radio2" type="radio" value="1" required>
+        <label id="respuesta2" for="radio2"><img class="carucha" src='img/medaigual.png'></label>
+        <input onclick="procesarRespuesta()" id="radio3" type="radio" value="2" required>
+        <label id="respuesta3" for="radio3"><img class="carucha" src='img/no.png'></label>       
     </form>
 </div>
 
